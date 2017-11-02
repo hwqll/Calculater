@@ -21,6 +21,7 @@ public class CalculaterPane {
     private Count count;
 
     public void createFrame(){
+        System.out.println("测试");
         jFrame = new JFrame("简易计算器");
         jFrame.setLayout(null);
         jFrame.setBounds(200,200,500,600);
