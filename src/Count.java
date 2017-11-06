@@ -29,10 +29,10 @@ public class Count {
             case "%":
                 return a % b;
               //  break;
-            case "s":
+            case "sq":
                 return a != 0 ? Math.sqrt(a) : -1;
               //  break;
-            case "x":
+            case "1/x":
                 return a != 0 ? 1 / a : -1;
               //  break;
             default:

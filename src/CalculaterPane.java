@@ -302,23 +302,44 @@ public class CalculaterPane {
         ob8.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                //String text = oper.getText();
-                if (left.getText().length() != 0 && right.getText().length() !=0 && oper.getText().length() !=0){
-                    Count c = new Count(Double.parseDouble(left.getText()), Double.parseDouble(right.getText()),
-                            oper.getText());
-                    double value = c.calculater();
-                    String s = String.format("%.2f", value);
+                if (oper.getText().equals("1/x") || oper.getText().equals("sq")){
+                    //String text = oper.getText();
+                    if (left.getText().length() != 0 ){
+                        Count c = new Count(Double.parseDouble(left.getText()),
+                                oper.getText());
+                        double value = c.calculater();
+                        String s = String.format("%.2f", value);
 
-                    if (value != -1){
-                        jTextField.setText(s);
+                        if (value != -1){
+                            jTextField.setText(s);
 
+                        }else {
+                            jTextField.setText("计算错误");
+
+                        }
                     }else {
-                        jTextField.setText("计算错误");
 
                     }
-                }else {
+                }else  {
+                    //String text = oper.getText();
+                    if (left.getText().length() != 0 && right.getText().length() !=0 && oper.getText().length() !=0){
+                        Count c = new Count(Double.parseDouble(left.getText()), Double.parseDouble(right.getText()),
+                                oper.getText());
+                        double value = c.calculater();
+                        String s = String.format("%.2f", value);
 
+                        if (value != -1){
+                            jTextField.setText(s);
+
+                        }else {
+                            jTextField.setText("计算错误");
+
+                        }
+                    }else {
+
+                    }
                 }
+
 
             }
         });
